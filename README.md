@@ -21,8 +21,7 @@ Sürüm sayfasındaki **Assets** bölümünde şu dosyalar bulunur:
 
 | Dosya | Açıklama |
 |---|---|
-| `PrintFarmMOM-Kurulum-1.0.0.exe` | Önerilen kurulum paketi (~258 MB) |
-| `PrintFarmMOM-Dagitim-1.0.0.zip` | Taşınabilir paket (exe + kılavuz) |
+| `PrintFarmMOM-Kurulum-1.0.0.exe` | Kurulum paketi (~258 MB) |
 | `SHA256SUMS.txt` | İndirilen dosyanın özeti |
 
 ![Genel Bakış](docs/kilavuz/resimler/01-genel-bakis.png)
