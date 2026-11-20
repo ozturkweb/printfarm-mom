@@ -1,6 +1,6 @@
 # PrintFarm MOM — Kullanım Kılavuzu
 
-> **Sürüm:** 1.0.0 · **Platform:** Windows 10/11 (64-bit)
+> **Sürüm:** 1.1.0 · **Platform:** Windows 10/11 (64-bit)
 
 Bu kılavuz, PrintFarm MOM'un her ekranını ve her özelliğini sırayla açıklar. Başlıklar
 uygulamadaki sol menüyle aynı sıradadır; bir özelliği ararken menüdeki adını
@@ -45,7 +45,7 @@ PrintFarm MOM yazıcıya doğrudan bağlanır; bulut hesabı veya internet bağl
 
 ### 1.2 Kurulum
 
-1. `PrintFarmMOM-Kurulum-1.0.0.exe` dosyasına çift tıklayın.
+1. `PrintFarmMOM-Kurulum-1.1.0.exe` dosyasına çift tıklayın.
 2. Windows SmartScreen uyarısı çıkarsa **Daha fazla bilgi → Yine de çalıştır** deyin.
    (Bu uyarı, henüz tanınmayan yeni programlarda görülebilir.)
 3. Kurulum sihirbazında **İleri** deyin; varsayılan klasörü değiştirmeniz gerekmez.
@@ -700,4 +700,4 @@ elle silin.
 
 ---
 
-*PrintFarm MOM 1.0.0 — 3D Üretim Yönetimi*
+*PrintFarm MOM 1.1.0 — 3D Üretim Yönetimi*
