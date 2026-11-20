@@ -109,28 +109,6 @@ ayrıntılar kılavuzun **9.1 Lisans** bölümündedir.
 
 > Bu depo, uygulamanın tanıtım ve kullanım belgelerini içerir. Kaynak kodun kullanımı
 > lisans sözleşmesine tabidir.
-
-## Geliştiriciler için
-
-Uygulama Python ile yazılmıştır: masaüstü arayüzü **PySide6**, veri katmanı **SQLAlchemy 2**,
-isteğe bağlı web arayüzü **FastAPI** üzerindedir. Aynı sunucu kodu hem masaüstünde gömülü hem
-de ayrı bir web servisi olarak çalışabilir.
-
-```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe run_desktop.py
-```
-
-Testler:
-
-```powershell
-.venv\Scripts\python.exe -m pytest -q
-```
-
-Mimari, API özeti, yapılandırma ve derleme adımları:
-[`docs/GELISTIRICI.md`](docs/GELISTIRICI.md)
-
 ## İletişim
 
 Lisans, satın alma ve destek:
