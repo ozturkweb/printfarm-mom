@@ -10,18 +10,15 @@ filament stoğunu ve sipariş/maliyet hesaplarını aynı programda yönetmenizi
 Kurulum gerektiren bir sunucu, bulut hesabı veya internet bağlantısı yoktur: program yazıcılara
 doğrudan yerel ağdan bağlanır, tüm veriler kendi bilgisayarınızda kalır.
 
-> Bu depo **yalnızca dağıtım** için kullanılır. Kaynak kodu paylaşılmaz; program kurulum
-> dosyası olarak GitHub Releases üzerinden sunulur.
-
 ## İndirme
 
-**En son sürüm:** [GitHub Releases — en son sürüm](https://github.com/ozturkweb/printfarm-mom/releases/latest)
-
-Sürüm sayfasındaki **Assets** bölümünde şu dosyalar bulunur:
+Kurulum ve taşınabilir sürümler **GitHub Releases** üzerinden yayınlanır:
+[ozturkweb/printfarm-mom — en son sürüm](https://github.com/ozturkweb/printfarm-mom/releases/latest).
+Her sürümün **Assets** kısmında şu dosyalar bulunur:
 
 | Dosya | Açıklama |
 |---|---|
-| `PrintFarmMOM-Kurulum-1.0.0.exe` | Kurulum paketi (~258 MB) |
+| `PrintFarmMOM-Kurulum-1.1.1.exe` | Kurulum paketi (~258 MB) |
 | `SHA256SUMS.txt` | İndirilen dosyanın özeti |
 
 ![Genel Bakış](docs/kilavuz/resimler/01-genel-bakis.png)
@@ -45,6 +42,9 @@ Sürüm sayfasındaki **Assets** bölümünde şu dosyalar bulunur:
   canlı görünür.
 - **İşletme yönetimi** — sipariş, müşteri, ürün, kasa ve raporlar; gram, elektrik, işçilik ve
   amortisman dahil otomatik maliyet hesabı.
+- **Cari hesap ve veresiye** — müşteri kartından ne aldığı, ne ödediği ve yürüyen bakiye;
+  nakit/veresiye/kısmi ödeme seçimi, veresiye takibi ve tahsilat.
+- **İskonto profilleri** — bayii, VIP gibi müşteri grupları için tanımlı indirim oranları.
 - **Filament stoğu** — bobin bazında stok, kalan gram, alış fiyatı ve düşük stok uyarısı;
   üretim harcamaları hareket defterine işlenir.
 
@@ -76,10 +76,9 @@ Yazıcının kendi web arayüzü açık olmalıdır. Ayrıntılı uyumluluk notl
 
 ## Kurulum
 
-1. [En son sürümü](https://github.com/ozturkweb/printfarm-mom/releases/latest) indirin.
-2. `PrintFarmMOM-Kurulum-1.0.0.exe` dosyasını çalıştırın.
-3. Windows SmartScreen uyarısı çıkarsa **Ek bilgi → Yine de çalıştır** deyin.
-4. **İleri → Yükle** adımlarını izleyin.
+1. `PrintFarmMOM-Kurulum-1.1.1.exe` dosyasını çalıştırın.
+2. Windows SmartScreen uyarısı çıkarsa **Daha fazla bilgi → Yine de çalıştır** deyin.
+3. **İleri → Yükle** adımlarını izleyin.
 
 Kurulum yönetici yetkisi istemez; program kullanıcı hesabınıza kurulur
 (`%LOCALAPPDATA%\Programs\PrintFarmMOM`). Güncelleme ve kaldırma, verilerinize dokunmaz:
@@ -111,16 +110,37 @@ klasöründe ayrı tutulur.
 
 Fiyatlar KDV dahildir. Lisans bilgisayar başına olup **yazıcı sayısı sınırsızdır**;
 her ek bilgisayar için ayrı lisans gerekir. **Kurulum ve eğitim hizmeti verilmez** —
-programı aşağıdaki adımlarla kendiniz kurarsınız.
-
-Ayrıntılı koşullar: [`docs/FIYAT-POLITIKASI.md`](docs/FIYAT-POLITIKASI.md) · Lisans almak için
-makine kodunuzu [iletisim@ozturk-web.com](mailto:iletisim@ozturk-web.com) adresine gönderin.
+programı aşağıdaki adımlarla kendiniz kurarsınız. Ayrıntılı koşullar: [`docs/FIYAT-POLITIKASI.md`](docs/FIYAT-POLITIKASI.md)
 
 ## Lisanslama
 
 Program 30 gün boyunca deneme modunda çalışır. Süre sonunda **Lisansı Yönet…** penceresinden
 makine kodunuzu satıcıya iletip lisans dosyanızı alabilirsiniz. Lisans bu bilgisayara bağlıdır;
 ayrıntılar kılavuzun **9.1 Lisans** bölümündedir.
+
+> Bu depo, uygulamanın tanıtım ve kullanım belgelerini içerir. Kaynak kodun kullanımı
+> lisans sözleşmesine tabidir.
+
+## Geliştiriciler için
+
+Uygulama Python ile yazılmıştır: masaüstü arayüzü **PySide6**, veri katmanı **SQLAlchemy 2**,
+isteğe bağlı web arayüzü **FastAPI** üzerindedir. Aynı sunucu kodu hem masaüstünde gömülü hem
+de ayrı bir web servisi olarak çalışabilir.
+
+```powershell
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe run_desktop.py
+```
+
+Testler:
+
+```powershell
+.venv\Scripts\python.exe -m pytest -q
+```
+
+Mimari, API özeti, yapılandırma ve derleme adımları:
+[`docs/GELISTIRICI.md`](docs/GELISTIRICI.md)
 
 ## İletişim
 
