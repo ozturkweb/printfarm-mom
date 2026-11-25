@@ -101,12 +101,8 @@ koşulları geriye dönük uygulanmaz.
 
 ---
 
-## 9. Müşteriye gönderilecek kısa metin
+## Notlar
 
-> **PrintFarm MOM fiyatları**
-> - **Yıllık:** ₺3.000 / yıl — 1 bilgisayar, sınırsız yazıcı, 12 ay kullanım ve güncellemeler
-> - **Süresiz:** ₺5.000 (tek seferlik) — 1 bilgisayar, sınırsız yazıcı, süresiz kullanım ve güncellemeler
->
 > Fiyatlar KDV dahildir. Kurulum ve eğitim hizmeti verilmez; programı kılavuzdaki
 > adımlarla kendiniz kurarsınız. Her bilgisayar için ayrı lisans gerekir.
 > Önce 30 gün ücretsiz deneyin. Lisans için makine kodunuzu gönderin.
