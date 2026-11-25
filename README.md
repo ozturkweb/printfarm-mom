@@ -10,15 +10,18 @@ filament stoğunu ve sipariş/maliyet hesaplarını aynı programda yönetmenizi
 Kurulum gerektiren bir sunucu, bulut hesabı veya internet bağlantısı yoktur: program yazıcılara
 doğrudan yerel ağdan bağlanır, tüm veriler kendi bilgisayarınızda kalır.
 
+> Bu depo **yalnızca dağıtım** için kullanılır. Kaynak kodu paylaşılmaz; program kurulum
+> dosyası olarak GitHub Releases üzerinden sunulur.
+
 ## İndirme
 
-Kurulum ve taşınabilir sürümler **GitHub Releases** üzerinden yayınlanır:
-[ozturkweb/printfarm-mom — en son sürüm](https://github.com/ozturkweb/printfarm-mom/releases/latest).
-Her sürümün **Assets** kısmında şu dosyalar bulunur:
+**En son sürüm:** [GitHub Releases — en son sürüm](https://github.com/ozturkweb/printfarm-mom/releases/latest)
+
+Sürüm sayfasındaki **Assets** bölümünde şu dosyalar bulunur:
 
 | Dosya | Açıklama |
 |---|---|
-| `PrintFarmMOM-Kurulum-1.1.0.exe` | Kurulum paketi (~258 MB) |
+| `PrintFarmMOM-Kurulum-1.0.0.exe` | Kurulum paketi (~258 MB) |
 | `SHA256SUMS.txt` | İndirilen dosyanın özeti |
 
 ![Genel Bakış](docs/kilavuz/resimler/01-genel-bakis.png)
@@ -42,9 +45,6 @@ Her sürümün **Assets** kısmında şu dosyalar bulunur:
   canlı görünür.
 - **İşletme yönetimi** — sipariş, müşteri, ürün, kasa ve raporlar; gram, elektrik, işçilik ve
   amortisman dahil otomatik maliyet hesabı.
-- **Cari hesap ve veresiye** — müşteri kartından ne aldığı, ne ödediği ve yürüyen bakiye;
-  nakit/veresiye/kısmi ödeme seçimi, veresiye takibi ve tahsilat.
-- **İskonto profilleri** — bayii, VIP gibi müşteri grupları için tanımlı indirim oranları.
 - **Filament stoğu** — bobin bazında stok, kalan gram, alış fiyatı ve düşük stok uyarısı;
   üretim harcamaları hareket defterine işlenir.
 
@@ -76,9 +76,10 @@ Yazıcının kendi web arayüzü açık olmalıdır. Ayrıntılı uyumluluk notl
 
 ## Kurulum
 
-1. `PrintFarmMOM-Kurulum-1.1.0.exe` dosyasını çalıştırın.
-2. Windows SmartScreen uyarısı çıkarsa **Daha fazla bilgi → Yine de çalıştır** deyin.
-3. **İleri → Yükle** adımlarını izleyin.
+1. [En son sürümü](https://github.com/ozturkweb/printfarm-mom/releases/latest) indirin.
+2. `PrintFarmMOM-Kurulum-1.0.0.exe` dosyasını çalıştırın.
+3. Windows SmartScreen uyarısı çıkarsa **Ek bilgi → Yine de çalıştır** deyin.
+4. **İleri → Yükle** adımlarını izleyin.
 
 Kurulum yönetici yetkisi istemez; program kullanıcı hesabınıza kurulur
 (`%LOCALAPPDATA%\Programs\PrintFarmMOM`). Güncelleme ve kaldırma, verilerinize dokunmaz:
@@ -101,14 +102,26 @@ klasöründe ayrı tutulur.
 | Dilimleyici | Bambu Studio, OrcaSlicer, PrusaSlicer, Cura veya Creality Print (en az biri) |
 | Kamera (isteğe bağlı) | Creality WebRTC kamerası için Microsoft Edge |
 
+## Fiyatlar
+
+| Plan | Kapsam | Fiyat |
+|---|---|---|
+| **Yıllık** | 1 bilgisayar · 12 ay kullanım · güncellemeler dahil | **₺3.000 / yıl** |
+| **Süresiz** | 1 bilgisayar · süresiz kullanım · güncellemeler dahil | **₺5.000 (tek seferlik)** |
+
+Fiyatlar KDV dahildir. Lisans bilgisayar başına olup **yazıcı sayısı sınırsızdır**;
+her ek bilgisayar için ayrı lisans gerekir. **Kurulum ve eğitim hizmeti verilmez** —
+programı aşağıdaki adımlarla kendiniz kurarsınız.
+
+Ayrıntılı koşullar: [`docs/FIYAT-POLITIKASI.md`](docs/FIYAT-POLITIKASI.md) · Lisans almak için
+makine kodunuzu [iletisim@ozturk-web.com](mailto:iletisim@ozturk-web.com) adresine gönderin.
+
 ## Lisanslama
 
 Program 30 gün boyunca deneme modunda çalışır. Süre sonunda **Lisansı Yönet…** penceresinden
 makine kodunuzu satıcıya iletip lisans dosyanızı alabilirsiniz. Lisans bu bilgisayara bağlıdır;
 ayrıntılar kılavuzun **9.1 Lisans** bölümündedir.
 
-> Bu depo, uygulamanın tanıtım ve kullanım belgelerini içerir. Kaynak kodun kullanımı
-> lisans sözleşmesine tabidir.
 ## İletişim
 
 Lisans, satın alma ve destek:
